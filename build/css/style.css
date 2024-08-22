@@ -1306,6 +1306,14 @@ img {
   width: 100%;
 }
 
+.tactic-video__block iframe {
+  width: 900px;
+}
+
+.tactic-video__stick-down {
+  bottom: -45px;
+}
+
 @media (max-width: 1050px) {
   .header__menu {
     -webkit-transition: 0.4s;
@@ -1347,6 +1355,18 @@ img {
 @media (max-width: 1000px) {
   .modal-prog__box {
     width: 95%;
+  }
+
+  .tactic-video__block iframe {
+    width: 700px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 800px) {
+  .tactic-video__block iframe {
+    width: 400px;
+    height: 200px;
   }
 }
 
@@ -1492,6 +1512,21 @@ img {
   .party-games-universe__arrow,
   .party-games-info__person.party-games-info__person-two {
     display: none;
+  }
+
+  .party-games-video__img iframe {
+    height: 200px;
+  }
+}
+
+@media (max-width: 430px) {
+  .tactic-video__block iframe {
+    width: 300px;
+    height: 200px;
+  }
+
+  .tactic-video__stick-down {
+    bottom: 0;
   }
 }
 
