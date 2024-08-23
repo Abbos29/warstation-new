@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const modal = document.querySelector('.modal');
     const modalBox = document.querySelector('.modal__box');
-    const modalOpenBtns = document.querySelectorAll('.modal__btn'); // Получение всех кнопок открытия
+    const modalOpenBtns = document.querySelectorAll('.modal__btn');
     const modalCloseBtn = document.querySelector('.modal__close');
     const form = document.getElementById('myForm');
 
@@ -66,15 +66,13 @@ document.addEventListener('DOMContentLoaded', function () {
     modalOpenBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             modal.classList.add('modal__open');
-            body.classList.toggle('x-scroll');
-
+            body.classList.add('x-scroll');
         });
     });
 
     modalCloseBtn.addEventListener('click', () => {
         modal.classList.remove('modal__open');
         body.classList.remove('x-scroll');
-
     });
 
     modal.addEventListener('click', (event) => {
@@ -88,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
 
         const phoneNumber = document.getElementById('phoneNumber').value;
-        const chatId = '-4285699435';
-        const botToken = '7266024320:AAFWtt01ghCyqXQhZLhZxrMda9562nhDIHE';
+        const chatId = '-1002189218371';
+        const botToken = '7213039653:AAE43Bh4FN4E3zBKQZQpScaHdJ9uMRp9mSg';
 
         const message = `Номер телефона: ${phoneNumber}`;
         const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
@@ -110,7 +108,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     modalBox.innerHTML = '<h2>Успешно отправлено ✅</h2>';
                     setTimeout(() => {
                         modal.classList.remove('modal__open');
-                    }, 4000); // Убираем класс modal__open через 1 секунду
+                        body.classList.remove('x-scroll');
+                    }, 4000); // Закрытие окна через 4 секунды
                 } else {
                     alert('Ошибка отправки сообщения');
                 }
@@ -120,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 });
+
 
 
 
