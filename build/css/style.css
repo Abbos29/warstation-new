@@ -1314,6 +1314,10 @@ img {
   bottom: -45px;
 }
 
+.party-games-emotions {
+  padding-top: 280px;
+}
+
 @media (max-width: 1050px) {
   .header__menu {
     -webkit-transition: 0.4s;
