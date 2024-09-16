@@ -208,17 +208,17 @@ document.addEventListener('DOMContentLoaded', function () {
 // SWIPER
 
 const swiperTactic = new Swiper('.tactic__swiper', {
-  
+
     pagination: {
-      el: '.swiper-pagination',
+        el: '.swiper-pagination',
     },
-  
+
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-  
+
     slidesPerView: 1,
     spaceBetween: 20,
-    
-  });
+
+});
